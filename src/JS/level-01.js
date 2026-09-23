@@ -1,40 +1,66 @@
+import levelBackground from '../assets/Level-01.png';
 
 const level01 = {    
     id:1,
     name:"Level 01",
+    background: levelBackground,
     items: [
         {
             id: 1,
-            name: "Object 1",
-            image: "",
-            x: 300,
-            y: 250,
-            width: 80,
-            height: 80,
-            color: "red"
+            name: "trinket01",
+            image: "src/assets/Bartender.png",
+            x: 830,
+            y: 460,
+            width: 81,
+            height: 87            
         },
 
         {
             id: 2,
-            name: "Object 2",
-            image: "",
-            x: 900,
-            y: 450,
-            width: 100,
-            height: 100,
-            color: "blue"
+            name: "trinket02",
+            image: "src/assets/Bishop.png",
+            x: 590,
+            y: 740,
+            width: 58,
+            height: 86            
         },
 
         {
             id: 3,
-            name: "Object 3",
-            image: "",
-            x: 1500,
-            y: 700,
+            name: "trinket03",
+            image: "src/assets/Dwarf01.png",
+            x:250,
+            y: 890,
+            width: 52,
+            height: 58            
+        },
+        {
+            id: 4,
+            name: "trinket04",
+            image: "src/assets/Dwarf02.png",
+            x: 1355,
+            y: 968,
             width: 60,
-            height: 60,
-            color: "green"
-        }
+            height: 71            
+        },
+        {
+            id: 5,
+            name: "trinket05",
+            image: "src/assets/Guard_02.png",
+            x: 1600,
+            y: 110,
+            width: 60,
+            height: 95            
+        },
+        {
+            id: 6,
+            name: "trinket06",
+            image: "src/assets/Guard_cpt.png",
+            x: 755,
+            y: 100,
+            width: 48,
+            height: 74            
+        },
     ]
 }
 

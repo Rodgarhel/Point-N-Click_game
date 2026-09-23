@@ -23,12 +23,15 @@ body {
 
 .game-board {
     position: absolute;
-
     left: 0;
     top: 0;
-    transform-origin: 0 0;
+    transform-origin: 50% 50%;
 
     background-color: #111;
+    
+    background-repeat: no-repeat;
+    background-size:100%;
+
 }
 
 .game-item {

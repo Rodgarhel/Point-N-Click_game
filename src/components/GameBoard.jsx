@@ -14,7 +14,7 @@ function GameBoard({level}) {
   });
   
 //------------------
-//---
+//--- Handle Screen Panning
 //------------------ 
   function handleMouseDown(event) {
     isDragging.current = true;
@@ -23,7 +23,6 @@ function GameBoard({level}) {
         x: event.clientX,
         y: event.clientY
     };
-
   }
 
   function handleMouseMove(event) {
@@ -42,12 +41,13 @@ function GameBoard({level}) {
       y: event.clientY
     };
   }
+
   function handleMouseUp() {
     isDragging.current = false;
   }
   
   //------------------
-  //---
+  //--- Handle Screen Zoom
   //------------------
   function handleWheel(event) {
     const zoomAmount = 0.1;
@@ -60,11 +60,11 @@ function GameBoard({level}) {
       } else {
         newZoom = previous - zoomAmount;
       }
-      return Math.max(0.5, Math.min(newZoom, 3));
+      return Math.max(0.75, Math.min(newZoom, 2));
     })
   }
 //------------------
-//---
+//--- Click and scoring
 //------------------
     function handleClick(e) {
         if (e.target.classList.contains("game-item")) {
@@ -75,7 +75,7 @@ function GameBoard({level}) {
     }
   
 //------------------
-//---
+//--- Render
 //------------------    
   return (
     <div
@@ -90,8 +90,9 @@ function GameBoard({level}) {
       <div 
         className='game-board'  
         style={{
-          width: `${level.width}px`,
-          height: `${level.height}px`,
+          width: `1920px`,
+          height: `1080px`,
+          backgroundImage: `url(${level.background})`,
           transform: `
               translate(${pos.x}px, ${pos.y}px)
               scale(${zoom})
