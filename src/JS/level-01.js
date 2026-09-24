@@ -3,6 +3,8 @@ import levelBackground from '../assets/Level-01.png';
 const level01 = {    
     id:1,
     name:"Level 01",
+    width: 1920,
+    height: 1080,
     background: levelBackground,
     items: [
         {
